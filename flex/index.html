@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #main {
+      display: flex;
+      flex: 1;
+    }
+    #main > article {
+      flex: 1;
+      order: 1;
+    }
+
+    #main > aside {
+      flex: 0 0 20vw;
+      order: 2;
+    }
+
+    header {
+      height: 15vh;
+    }
+
+    nav {
+      height: 5vh;
+    }
+
+    footer {
+      height: 10vh;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+      border: 2px solid black;
+      padding: 1em;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <header><h2>HEADER</h2></header>
+    <nav><h2>NAVIGATION</h2></nav>
+    <div id="main">
+      <article><h2>CONTENT</h2></article>
+
+      <aside><h2>SIDEBAR</h2></aside>
+    </div>
+    <footer><h2>FOOTER</h2></footer>
+  </body>
+</html>
